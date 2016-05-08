@@ -51,6 +51,19 @@
 
 [Calabash Quick Start for Android Studio](https://developer.xamarin.com/guides/testcloud/calabash/quickstarts/android-studio/)
 
+#### Installation
+
+    gem install cucumber
+
+#### Start
+Create a new test project folder
+
+    dna2me$ cucumber --init
+        create   features
+        create   features/step_definitions
+        create   features/support
+        create   features/support/env.rb
+    dna2me$
 
 ## 自動化測試工具類型介紹
   1. 按照產生的方式
