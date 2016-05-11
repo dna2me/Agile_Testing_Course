@@ -52,18 +52,41 @@
 [Calabash Quick Start for Android Studio](https://developer.xamarin.com/guides/testcloud/calabash/quickstarts/android-studio/)
 
 #### Installation
+1. 安裝Ruby (按照以下指令，將利用rbenv安裝Ruby)
+    
+        git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
+        echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
+        echo 'eval "$(rbenv init -)"' >> ~/.bash_profile 
+        source ~/.bash_profile
+        git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+        rbenv install 2.2.2
+        rbenv global 2.2.2
+        rbenv init
+        rbenv rehash
 
-    gem install cucumber
+2. 安裝calabash-android
+
+        gem install calabash-android
+
 
 #### Start
 Create a new test project folder
 
-    dna2me$ cucumber --init
-        create   features
-        create   features/step_definitions
-        create   features/support
-        create   features/support/env.rb
-    dna2me$
+    calabash-android gen
+
+The following folders and files you will get.
+
+* features
+* features/step_definitions
+* features/step\_definitions/calabash\_steps.rb
+* features/support
+* features/support/env.rb
+* features/support/app\_installation\_hooks.rb
+* features/support/app\_life\_cycle\_hooks.rb
+* features/support/hooks.rb
+
+#### Write my first BDD
+
 
 ## 自動化測試工具類型介紹
   1. 按照產生的方式
